@@ -17,12 +17,14 @@ pipeline {
         sh 'node --version'
       }
     }
-   tage('Data-Base') {
+   stage('Data-Base') {
       agent {
         docker { image 'mysql:8.0' }
       }
       steps {
         sh 'mysql --version'
       }
+   }
  }
 }
+
